@@ -1,0 +1,48 @@
+header {
+  background: $color-secundario;
+  .header-inner {
+    @media (min-width: $break-tablet) {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    padding: 12px 0;
+  }
+  .logo { margin: 0; font-size: 1.6rem; color: $color-primario; }
+  nav ul { list-style: none; padding: 0; margin: 8px 0 0; }
+  nav li { display: inline-block; margin-right: 16px; }
+  nav a { color: $color-texto; font-weight: 600; }
+}
+
+.portada {
+  background: #fff4f7;
+  .portada-inner {
+    @media (min-width: $break-tablet) {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px;
+    }
+    padding: 24px 0;
+  }
+  h2 { color: $color-primario; margin-top: 0; }
+  .cta {
+    display: inline-block; margin-top: 12px;
+    background: $color-primario; color: #fff; padding: 10px 16px; border-radius: 8px;
+    transition: background .25s ease, transform .25s ease;
+    &:hover { background: darken($color-primario, 8%); transform: translateY(-1px); }
+  }
+}
+
+.destacados {
+  padding: 32px 0;
+  h3 { text-align: center; margin: 0 0 16px; }
+  .grid-productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    @media (min-width: $break-tablet)  { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: $break-desktop) { grid-template-columns: repeat(3, 1fr); }
+  }
+}
+
+footer {
+  background: $color-secundario;
+  padding: 16px 0;
+  p { margin: 4px 0; text-align: center; }
+}

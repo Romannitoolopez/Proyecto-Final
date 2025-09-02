@@ -1,0 +1,30 @@
+// Keyframe "appearUp" para entradas suaves
+@keyframes appearUp {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+// Utilidad de animación
+.appear {
+  animation: appearUp .8s ease both;
+}
+
+// Hover scale sutil para tarjetas/botones
+.hover-scale {
+  transition: transform .25s ease, box-shadow .25s ease;
+  &:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+}
+
+// Subrayado animado en links del nav
+.underline-anim {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0; height: 2px;
+    background: $color-primario;
+    transition: width .25s ease;
+  }
+  &:hover::after { width: 100%; }
+}

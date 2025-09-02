@@ -1,3 +1,73 @@
+// ==========================
+// MAIN.SCSS
+// ==========================
 
+// Importo variables
+@import 'variables';
 
-/*# sourceMappingURL=main.css.map */
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Tipografía general
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $color-fondo;
+  color: $color-texto;
+}
+
+// Navbar
+nav {
+  background-color: $color-principal;
+  padding: 10px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    li a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Hero
+.hero {
+  background-color: lighten($color-principal, 30%);
+  text-align: center;
+  padding: 40px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: $color-secundario;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($color-secundario, 10%);
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $color-principal;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
