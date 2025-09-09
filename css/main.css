@@ -1,25 +1,19 @@
-// ==========================
-// MAIN.SCSS
-// ==========================
 
-// Importo variables
 @import 'variables';
 
-// Reset básico
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// Tipografía general
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: $color-fondo;
   color: $color-texto;
 }
 
-// Navbar
 nav {
   background-color: $color-principal;
   padding: 10px;
@@ -39,14 +33,12 @@ nav {
     }
   }
 }
-
-// Hero
 .hero {
   background-color: lighten($color-principal, 30%);
   text-align: center;
   padding: 40px;
 
-  h2 {
+  h2{
     margin-bottom: 10px;
   }
 
@@ -64,7 +56,7 @@ nav {
   }
 }
 
-// Footer
+
 footer {
   background-color: $color-principal;
   color: white;
